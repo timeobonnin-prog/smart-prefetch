@@ -1,0 +1,15 @@
+﻿{
+  "prerender": [
+    {
+      "where": {
+        "and": [
+          { "href_matches": "/*" },
+          { "not": { "href_matches": "/*logout*" } },
+          { "not": { "href_matches": "/*admin*" } },
+          { "not": { "href_matches": "/*checkout*" } }
+        ]
+      },
+      "eagerness": "moderate"
+    }
+  ]
+}
