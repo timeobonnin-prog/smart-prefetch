@@ -1,0 +1,33 @@
+﻿* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  width: 320px;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f1115;
+  color: #e7e9ee;
+  padding: 14px;
+}
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+h1 { font-size: 15px; font-weight: 600; }
+#version { font-size: 11px; color: #8b93a7; background: #1a1d24; padding: 2px 6px; border-radius: 4px; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+.stat { background: #1a1d24; border: 1px solid #232732; border-radius: 8px; padding: 8px 10px; display: flex; flex-direction: column; gap: 2px; }
+.label { font-size: 10px; color: #8b93a7; text-transform: uppercase; letter-spacing: .04em; }
+.value { font-size: 18px; font-weight: 600; color: #6ea8fe; }
+.toggle { background: #1a1d24; border: 1px solid #232732; border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; }
+.toggle label { display: flex; align-items: center; gap: 8px; font-size: 12px; cursor: pointer; user-select: none; }
+.toggle input { accent-color: #6ea8fe; width: 16px; height: 16px; }
+.hosts h2 { font-size: 11px; color: #8b93a7; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .04em; }
+.hosts ul { list-style: none; }
+.hosts li { display: flex; justify-content: space-between; padding: 5px 8px; font-size: 12px; border-radius: 6px; }
+.hosts li:nth-child(odd) { background: #161920; }
+.hosts .count { color: #6ea8fe; font-weight: 600; }
+.hosts .empty { color: #555c6e; justify-content: center; }
+footer { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+button {
+  width: 100%; padding: 8px; background: #1a1d24; border: 1px solid #232732;
+  border-radius: 6px; color: #e7e9ee; font-size: 12px; cursor: pointer;
+  transition: background .15s;
+}
+button:hover { background: #232732; }
+#prefetch-all { background: #6ea8fe; color: #0f1115; border-color: #6ea8fe; font-weight: 600; }
+#prefetch-all:hover { background: #8cbcff; }

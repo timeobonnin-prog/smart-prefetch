@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Prefetch — Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header>
+    <h1>⚡ Smart Prefetch — Options</h1>
+    <span class="ver">v2.0.0</span>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Generale</h2>
+      <label class="row">
+        <span>Activer l'extension</span>
+        <input type="checkbox" id="enabled">
+      </label>
+      <label class="row">
+        <span>Afficher le badge sur l'icone</span>
+        <input type="checkbox" id="showIconBadge">
+      </label>
+      <label class="row">
+        <span>Afficher la bulle au survol</span>
+        <input type="checkbox" id="showHoverBadge">
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>Reglages</h2>
+      <label class="row">
+        <span>Delai avant prefetch au survol</span>
+        <input type="number" id="hoverDelay" min="0" max="1000" step="10">
+        <span class="unit">ms</span>
+      </label>
+      <label class="row">
+        <span>Marge du viewport</span>
+        <input type="number" id="viewportMargin" min="0" max="3000" step="100">
+        <span class="unit">px</span>
+      </label>
+      <label class="row">
+        <span>Prefetch simultanes max</span>
+        <input type="number" id="maxPrefetch" min="1" max="9999" step="1">
+      </label>
+      <label class="row">
+        <span>Markov : transitions min</span>
+        <input type="number" id="markovMinHits" min="1" max="10" step="1">
+      </label>
+      <label class="row">
+        <span>Bloquer en 2G / Save-Data</span>
+        <input type="checkbox" id="blockSlowConn">
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>Liste noire (blocklist)</h2>
+      <p class="hint">Un domaine par ligne. Le prefetch sera desactive sur ces sites.</p>
+      <textarea id="blocklist" rows="10"></textarea>
+    </section>
+
+    <section class="card">
+      <h2>Liste blanche (whitelist)</h2>
+      <p class="hint">Si non vide, seuls ces domaines seront precharges.</p>
+      <textarea id="whitelist" rows="6"></textarea>
+    </section>
+
+    <section class="card">
+      <h2>Statistiques</h2>
+      <div class="stat-grid">
+        <div class="stat"><span class="label">Pages prechargees</span><span class="value" id="s-prefetched">0</span></div>
+        <div class="stat"><span class="label">Hits</span><span class="value" id="s-hits">0</span></div>
+        <div class="stat"><span class="label">Temps gagne</span><span class="value" id="s-saved">0 s</span></div>
+        <div class="stat"><span class="label">Mesures</span><span class="value" id="s-measures">0</span></div>
+      </div>
+      <ul id="hosts-list" class="hosts"></ul>
+    </section>
+  </main>
+
+  <footer class="sticky-footer">
+    <button id="save" class="primary">Enregistrer</button>
+    <button id="reset-stats">Reinitialiser les stats</button>
+    <span id="status"></span>
+  </footer>
+
+  <script src="options.js"></script>
+</body>
+</html>

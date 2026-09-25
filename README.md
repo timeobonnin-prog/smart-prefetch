@@ -1,2 +1,11 @@
-# smart-prefetch
-Smart Prefetch précharge automatiquement les pages web en arrière-plan pour qu'elles s'ouvrent quasi instantanément. Prédiction par survol, scroll et historique, badge live, options complètes. Rapide, privé, local.
+﻿# Smart Prefetch
+
+Extension Chrome / Edge / Brave qui precharge les pages en arriere-plan
+avec un algorithme de prediction (survol, viewport, scroll, chaine de Markov).
+
+## Installation
+
+1. Ouvrir `chrome://extensions`
+2. Activer le **Mode developpeur**
+3. Cliquer **Charger l'extension non empaquetee**
+4. Selectionner le dossier `smart-prefetch`
